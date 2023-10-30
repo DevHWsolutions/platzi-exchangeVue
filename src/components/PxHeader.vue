@@ -6,7 +6,7 @@
           <px-icon class="mr-2"></px-icon>
           <router-link :to="{name:'Home'}"
           class="font-semibold text-xl tracking-tight"
-            >PlatziExchange</router-link
+            >PlatziExchange Vue</router-link
           >
         </div>
         <div
