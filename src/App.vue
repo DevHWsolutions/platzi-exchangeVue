@@ -1,18 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <main>
+    <PxHeader :links="links"></PxHeader>
+    <router-view class="container px-5 sm:px-20 py-20 flex justify-center" />
+  </main>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import PxHeader from "./components/PxHeader.vue";
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
+  name: "app",
+  components: { PxHeader },
+
+  data(){
+    return{
+      links: [
+        {
+          title: 'BTC',
+          to: { name: 'CoinDetail', params: { id: 'bitcoin' } }
+        },
+        {
+          title: 'ETH',
+          to: { name: 'CoinDetail', params: { id: 'ethereum' } }
+        },
+        {
+          title: 'USDT',
+          to: { name: 'CoinDetail', params: { id: 'tether' } }
+        }
+      ]
+    }
+  }
 };
 </script>
 
