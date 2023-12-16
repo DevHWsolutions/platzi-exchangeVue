@@ -10,6 +10,12 @@
         <th>Precio</th>
         <th>Cap. de Mercado</th>
         <th>Variación 24hs</th>
+        <input
+                v-model="converValue"
+               type="text"
+               placeholder="buscar valor"
+               class="text-center bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+                  />
         <td class="hidden sm:block"></td>
       </tr>
     </thead>
